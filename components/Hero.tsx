@@ -45,7 +45,7 @@ export default function Hero() {
     priority
     className="object-cover"
     style={{
-      transform: "scale(1.3) translateX(10%) translateY(19%)",
+      transform: "scale(1.2) translateX(10%) translateY(12%)",
       objectPosition: "center",
       opacity: 1,
     }}
@@ -71,7 +71,7 @@ export default function Hero() {
         className="
           absolute
           top-20
-          md:top-24
+          md:top-11
           bottom-0
           left-0
           right-0

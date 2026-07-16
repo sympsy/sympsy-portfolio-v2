@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0b0b;
+  --foreground: #ffffff;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "SF Pro Display";
+}
+
+.chrome-text {
+  position: relative;
+
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #ffffff 20%,
+    #ffab44 35%,
+    #ffffff 50%,
+    #ffffff 65%,
+    #ffffff 80%,
+    #ffcd68 95%,
+    #000000 100%
+);
+
+  background-size: 200% 100%;
+
+  color: transparent;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: chrome-shine 20s linear infinite;
+
+  filter:
+    drop-shadow(0 0 80px rgb(255, 255, 255))
+}
+
+
+@keyframes chrome-shine {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 200% center;
+  }
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image: url("/grain.png");
+  background-repeat: repeat;
+  opacity: .15;
+  z-index: 9999;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Hide scrollbar but keep scrolling */
+html,
+body {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE & old Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Edge */
+}
+
+/* Hide scrollbars everywhere */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}

@@ -90,7 +90,7 @@ body {
 
   background-image: url("/grain.png");
   background-repeat: repeat;
-  opacity: 0.15;
+  opacity: 0.1;
   z-index: 9999;
 }
 

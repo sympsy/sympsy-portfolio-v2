@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,9 +42,12 @@ export default function Navbar() {
         }
       `}
     >
-      <div className="text-xl tracking-[0.1em]">
-        SYMPSY '26
-      </div>
+      <Link
+  href="/"
+  className="text-xl tracking-[0.1em]"
+>
+  SYMPSY '26
+</Link>
 
       <div className="flex gap-8 text-sm uppercase tracking-widest">
         <a
@@ -53,11 +57,12 @@ export default function Navbar() {
           Work
         </a>
 
-          {/*
-  <a href="#about" className="hover:opacity-60 transition">
-    About
-  </a>
-  */}
+          <a
+  href="/about"
+  className="hover:opacity-60 transition"
+>
+  About
+</a>
 
         <a
           href="#contact"

@@ -56,7 +56,7 @@ export default function Contact() {
         >
 
           <a
-            href="mailto:your@email.com"
+            href="mailto:hello@sympsy.com"
             className="
               hover:text-white
               transition

@@ -62,7 +62,7 @@ export default function Contact() {
               transition
             "
           >
-            Email → sympsyy@gmail.com
+            Email → hello@sympsy.com
           </a>
 
 

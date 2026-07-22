@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Mobile Hero Image */}
     <div className="absolute top-20 bottom-0 left-0 right-0 z-0 md:hidden">
     <Image
-        src="/hero-mobile.webp"
+        src="/hero-mobile_dune1.webp"
         alt=""
         fill
         priority
@@ -58,9 +58,9 @@ export default function Hero() {
           absolute
           inset-0
           bg-gradient-to-r
-          from-black
+          from-black/50
           md:from-black
-          via-black/50
+          via-black/25
           md:via-black/65
           to-transparent
         "

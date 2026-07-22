@@ -11,7 +11,7 @@ export default function Hero() {
       {/* <Marquee /> */}
 
       {/* Mobile Hero Image */}
-      <div className="absolute top-20 bottom-0 left-0 right-0 z-0 md:hidden">
+      <div className="absolute top-0 bottom-0 left-0 right-0 z-0 md:hidden">
         <Image
           src="/hero-mobile_dune1.webp"
           alt=""
@@ -65,24 +65,25 @@ export default function Hero() {
         "
       />
 
-      {/* Top & Bottom Fade */}
+      {/* Top & Bottom Fade 20 */}
       <div
         className="
           absolute
-          top-20
+          top-0
           md:top-11
           bottom-0
           left-0
           right-0
           bg-gradient-to-b
-          from-black
+          from-black/50
+          md:from-black
           via-transparent
           to-black
         "
       />
 
       {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Content */}
       <div
@@ -144,7 +145,7 @@ export default function Hero() {
               sm:text-base
               md:text-xl
               uppercase
-              tracking-[0.15em]
+              tracking-[0.1em]
               leading-relaxed
               text-white/70
             "

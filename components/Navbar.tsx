@@ -2,21 +2,36 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
 
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navigateToSection = (id: string) => {
+    if (pathname === "/") {
+      document
+        .getElementById(id)
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      sessionStorage.setItem("scrollTarget", id);
+      router.push("/");
+    }
+  };
 
   return (
     <nav
@@ -26,8 +41,9 @@ export default function Navbar() {
         left-0
         z-50
         w-full
-        px-5 md:px-8
-        py-8.5
+        px-5
+        md:px-8
+        py-5
         md:py-12.5
         flex
         justify-between
@@ -35,7 +51,6 @@ export default function Navbar() {
         text-white
         transition-all
         duration-500
-        h-2
         ${
           scrolled
             ? "bg-black/90 backdrop-blur-md"
@@ -51,26 +66,28 @@ export default function Navbar() {
       </Link>
 
       <div className="flex gap-5 md:gap-8 text-xs sm:text-sm uppercase tracking-widest">
-        <a
-          href="#work"
-          className="hover:opacity-60 transition"
+
+        <button
+          onClick={() => navigateToSection("work")}
+          className="uppercase hover:opacity-60 transition"
         >
           Work
-        </a>
+        </button>
 
         <Link
           href="/about"
-          className="hover:opacity-60 transition"
+          className="uppercase hover:opacity-60 transition"
         >
           About
         </Link>
 
-        <a
-          href="#contact"
-          className="hover:opacity-60 transition"
+        <button
+          onClick={() => navigateToSection("contact")}
+          className="uppercase hover:opacity-60 transition"
         >
           Contact
-        </a>
+        </button>
+
       </div>
     </nav>
   );

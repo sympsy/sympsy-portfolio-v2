@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "SYMPSY",
+  title: "WHO IS SYMPSY - PORTFOLIO",
   description:
     "Editorial photography and cinematic filmmaking portfolio of Jaheim Simpson.",
 };

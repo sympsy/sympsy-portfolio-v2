@@ -75,7 +75,7 @@ export default function Hero() {
           left-0
           right-0
           bg-gradient-to-b
-          from-black/50
+          from-black
           md:from-black
           via-transparent
           to-black
@@ -83,7 +83,7 @@ export default function Hero() {
       />
 
       {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Content */}
       <div

@@ -26,8 +26,9 @@ export default function Navbar() {
         left-0
         z-50
         w-full
-        px-8
-        py-12.5
+        px-5 md:px-8
+        py-8.5
+        md:py-12.5
         flex
         justify-between
         items-center
@@ -43,13 +44,13 @@ export default function Navbar() {
       `}
     >
       <Link
-  href="/"
-  className="text-xl tracking-[0.1em]"
->
-  SYMPSY '26
-</Link>
+        href="/"
+        className="text-sm sm:text-base md:text-xl tracking-[0.1em]"
+      >
+        SYMPSY '26
+      </Link>
 
-      <div className="flex gap-8 text-sm uppercase tracking-widest">
+      <div className="flex gap-5 md:gap-8 text-xs sm:text-sm uppercase tracking-widest">
         <a
           href="#work"
           className="hover:opacity-60 transition"
@@ -57,12 +58,12 @@ export default function Navbar() {
           Work
         </a>
 
-          <a
-  href="/about"
-  className="hover:opacity-60 transition"
->
-  About
-</a>
+        <Link
+          href="/about"
+          className="hover:opacity-60 transition"
+        >
+          About
+        </Link>
 
         <a
           href="#contact"

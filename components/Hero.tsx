@@ -11,46 +11,45 @@ export default function Hero() {
       {/* <Marquee /> */}
 
       {/* Mobile Hero Image */}
-    <div className="absolute top-20 bottom-0 left-0 right-0 z-0 md:hidden">
-    <Image
-        src="/hero-mobile_dune1.webp"
-        alt=""
-        fill
-        priority
-        className="object-cover"
-        style={{
-        objectPosition: "50% 30%",
-        }}
-    />
-    </div>
+      <div className="absolute top-20 bottom-0 left-0 right-0 z-0 md:hidden">
+        <Image
+          src="/hero-mobile_dune1.webp"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          style={{
+            objectPosition: "50% 30%",
+          }}
+        />
+      </div>
 
-
-    {/* Desktop Hero Image */}
-<div
-  className="
-    absolute
-    top-1
-    bottom-0
-    left-0
-    right-0
-    hidden
-    md:block
-    overflow-hidden
-  "
->
-  <Image
-    src="/hero-desktop.jpg"
-    alt=""
-    fill
-    priority
-    className="object-cover"
-    style={{
-      transform: "scale(1.2) translateX(10%) translateY(12%)",
-      objectPosition: "center",
-      opacity: 1,
-    }}
-  />
-</div>
+      {/* Desktop Hero Image */}
+      <div
+        className="
+          absolute
+          top-1
+          bottom-0
+          left-0
+          right-0
+          hidden
+          md:block
+          overflow-hidden
+        "
+      >
+        <Image
+          src="/hero-desktop.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          style={{
+            transform: "scale(1.2) translateX(10%) translateY(12%)",
+            objectPosition: "center",
+            opacity: 1,
+          }}
+        />
+      </div>
 
       {/* Left Fade */}
       <div
@@ -119,8 +118,8 @@ export default function Hero() {
               delay: 0.4,
             }}
             className="
-              text-5xl
-              sm:text-6xl
+              text-4xl
+              sm:text-5xl
               md:text-9xl
               font-light
               tracking-tight
@@ -137,14 +136,15 @@ export default function Hero() {
               delay: 1,
             }}
             className="
-              mt-6
+              mt-3.5
+              md:mt-6
               max-w-xs
               sm:max-w-sm
               text-sm
               sm:text-base
               md:text-xl
               uppercase
-              tracking-[0.25em]
+              tracking-[0.15em]
               leading-relaxed
               text-white/70
             "

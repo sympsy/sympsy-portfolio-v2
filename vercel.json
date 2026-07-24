@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "collab.sympsy.com"
+        }
+      ],
+      "destination": "https://docs.google.com/forms/d/e/1FAIpQLSdmHCXlYJq9tYV0J8hThOdrtG1bwwAX7Uwo9-8sgGfp1uV8Rg/viewform",
+      "permanent": false
+    }
+  ]
+}
